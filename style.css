@@ -49,7 +49,7 @@ ul {
 }
 
 li {
-  text-shadow: 0 1px 3px var(--teal-primary);
+  text-shadow: 1px 0px 3px var(--teal-primary);
   transition: all 0.5s ease-in-out;
 }
 
@@ -73,4 +73,7 @@ section {
   justify-content: center;
   align-items: center;
   background-color: var(--teal-primary);
+  border-radius: 5px;
+  border: 1px solid rgb(151, 195, 214);
+  box-shadow: 5px 5px 5px var(--teal-secondary);
 }
