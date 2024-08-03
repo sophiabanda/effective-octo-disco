@@ -1,7 +1,9 @@
 :root {
-  --blue-primary: rgb(25, 25, 40);
-  --teal-secondary: rgb(16, 65, 82);
-  --teal-primary: rgb(103, 212, 176);
+  --main-dark: #1a1423;
+  --secondary-dark: #372549;
+  --main-light: #eacdc2;
+  --secondary-light: #b75d69;
+  --mid-color: #774c60;
 }
 
 @font-face {
@@ -26,8 +28,8 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(20, 1fr);
-  background-color: var(--blue-primary);
-  color: var(--teal-secondary);
+  background-color: var(--main-dark);
+  color: var(--main-light);
 }
 
 /* ---------------------------------------HEADER */
@@ -49,13 +51,14 @@ ul {
 }
 
 li {
-  text-shadow: 1px 0px 3px var(--teal-primary);
+  text-shadow: 1px 0px 3px var(--secondary-light);
   transition: all 0.5s ease-in-out;
 }
 
 li:hover {
   transform: scale(1.5);
   cursor: pointer;
+  text-shadow: 2px 0px 3px rgb(243, 8, 227);
 }
 
 /* ---------------------------------------MAIN */
@@ -69,11 +72,55 @@ main {
 
 /* ---------------------------------------SECTIONS */
 section {
-  display: flex;
+  display: none;
+  opacity: 0;
   justify-content: center;
   align-items: center;
-  background-color: var(--teal-primary);
+  color: var(--main-dark);
   border-radius: 5px;
-  border: 1px solid rgb(151, 195, 214);
-  box-shadow: 5px 5px 5px var(--teal-secondary);
+  background-color: var(--mid-color);
+  border: 1px solid var(--secondary-dark);
+  box-shadow: 8px 8px 6px var(--main-light);
+  width: 0;
+  padding: 2vw;
+  transition: opacity 1.5s ease, color 2s ease, width 1.5s ease;
+}
+
+section.show {
+  display: flex;
+  opacity: 1;
+  width: 40vw;
+}
+
+section div {
+  background-color: var(--main-dark);
+  color: var(--main-light);
+  text-align: center;
+  width: 80vw;
+  height: 30vh;
+  padding: 3vw;
+  transition: opacity 1.5s ease, width 1.5s ease, height 1.5s ease;
+}
+
+section.div.show {
+  display: flex;
+  opacity: 1;
+  width: 80vw;
+  height: 30vh;
+}
+
+section div h1 {
+  border-bottom: 1px solid var(--secondary-light);
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 21;
+  }
+
+  main {
+    grid-column: 3 / 13;
+    grid-row: 1 /21;
+  }
 }
