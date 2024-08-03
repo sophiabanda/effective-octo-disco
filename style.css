@@ -4,6 +4,7 @@
   --main-light: #eacdc2;
   --secondary-light: #b75d69;
   --mid-color: #774c60;
+  --shadow: rgb(243, 8, 227);
 }
 
 @font-face {
@@ -58,7 +59,7 @@ li {
 li:hover {
   transform: scale(1.5);
   cursor: pointer;
-  text-shadow: 2px 0px 3px rgb(243, 8, 227);
+  text-shadow: 2px 0px 3px var(--shadow);
 }
 
 /* ---------------------------------------MAIN */
