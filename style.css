@@ -1,0 +1,76 @@
+:root {
+  --blue-primary: rgb(25, 25, 40);
+  --teal-secondary: rgb(16, 65, 82);
+  --teal-primary: rgb(103, 212, 176);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Roboto';
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  background-color: var(--blue-primary);
+  color: var(--teal-secondary);
+}
+
+/* ---------------------------------------HEADER */
+header {
+  grid-row: 1 / 21;
+  grid-column: 1 / 4;
+  box-shadow: 50px 0 50px rgb(11, 9, 23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 5vw;
+}
+
+li {
+  text-shadow: 0 1px 3px var(--teal-primary);
+  transition: all 0.5s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/* ---------------------------------------MAIN */
+main {
+  grid-column: 4 / 13;
+  grid-row: 1 /21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------------------------------------SECTIONS */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--teal-primary);
+}
