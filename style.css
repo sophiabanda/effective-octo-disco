@@ -5,6 +5,11 @@
   list-style-type: none;
 }
 
+@font-face {
+  font-family: 'BonaNovaSC';
+  src: url('assets/fonts/BonaNovaSC-Regular.ttf');
+}
+
 html {
   height: 100%;
 }
@@ -15,6 +20,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  font-family: 'BonaNovaSC';
 }
 
 header {
@@ -24,6 +30,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+h1 {
+  font-size: clamp(25px, 5vh, 55px);
+}
+
+header ul {
+  display: flex;
+}
+
+ul li {
+  margin: 2vw;
+  font-size: 2vw;
 }
 
 main {
