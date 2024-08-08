@@ -1,8 +1,18 @@
+:root {
+  /* --dark-main: #242231; */
+  --dark-main: #1d1626;
+  --dark-secondary: #4c2a85;
+  --medium: #788bff;
+  --light-main: #e5fcff;
+  --light-secondary: #bfa89e;
+}
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style-type: none;
+  /* box-sizing: border-box; */
 }
 
 @font-face {
@@ -21,15 +31,16 @@ body {
   justify-content: space-between;
   align-items: center;
   font-family: 'BonaNovaSC';
+  color: var(--light-main);
 }
 
 header {
-  background-color: aqua;
   width: 100%;
   height: 25vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--dark-main);
 }
 
 h1 {
@@ -54,13 +65,23 @@ main {
 }
 
 section {
-  background-color: blanchedalmond;
+  /* background-color: var(--dark-main); */
+  box-shadow: 5px 5px 15px var(--medium);
+  border-radius: 5px;
   margin: 5vh;
   height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section div {
+  background-color: var(--light-main);
+  color: var(--dark-main);
 }
 
 footer {
-  background-color: brown;
   width: 100%;
   text-align: center;
+  background-color: var(--dark-main);
 }
